@@ -57,7 +57,7 @@ def sendEmail(message, email, subject):
 	s.login(GOOGLE_EMAIL, GOOGLE_PASSWORD)
 
 	# Send email
-	s.sendmail(FROM_ADDRESS, [email] + ["gavin@gavinmccabe.com"] if
+	s.sendmail(FROM_ADDRESS, [email] + [FROM_ADDRESS] if
 	SEND_TO_SELF else [email], msg.as_string())
 	s.quit()
 
