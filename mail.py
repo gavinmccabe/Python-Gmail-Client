@@ -2,6 +2,7 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
+
 # Global configuration
 FROM_ADDRESS = "<PUT THE FROM ADDRESS HERE>"
 GOOGLE_EMAIL = "<PUT YOUR GOOGLE SIGN-IN EMAIL HERE>"
@@ -22,6 +23,16 @@ emailBody = \
 
 
 def sendEmail(message, email, subject):
+	"""
+	Send an email to a specified address using the global configuration
+	parameters.
+
+	:param message: The message to be sent to the recipient
+	:param email: The email address the message should be sent to
+	:param subject: The subject-line of the email
+	:return: None
+	"""
+
 
 	print(f"To: {email}")
 	print(f"From: {FROM_ADDRESS}")
