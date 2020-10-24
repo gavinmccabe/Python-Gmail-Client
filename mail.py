@@ -1,3 +1,9 @@
+"""
+Simple Gmail client in Python
+
+(c) Gavin McCabe 2020
+"""
+
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -5,10 +11,12 @@ from email.mime.text import MIMEText
 #
 # Global configuration
 #
-
+# Note: Due to Gmail security, if you have 2FA enabled, please create an
+# application-specific password.  You may need to turn on "Allow Less Secure
+# Apps" if 2FA isn't enabled on your account.
+#
 FROM_ADDRESS = "<PUT THE FROM ADDRESS HERE>"
 GOOGLE_EMAIL = "<PUT YOUR GOOGLE SIGN-IN EMAIL HERE>"
-# This must be an application specific password if your Gmail account uses 2FA
 GOOGLE_PASSWORD = "<PUT YOUR GOOGLE PASSWORD HERE>"
 SEND_TO_SELF = False # If True, a copy of the email will be sent to yourself
 
