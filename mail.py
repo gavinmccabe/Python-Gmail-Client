@@ -23,6 +23,7 @@ SEND_TO_SELF = False # If True, a copy of the email will be sent to yourself
 
 #
 # Message configuration
+# `emailRecipient` may instead be a list of email addresses
 #
 emailRecipient = "<RECIPIENT>"
 emailSubject = "<SUBJECT>"
@@ -72,4 +73,9 @@ def sendEmail(message, email, subject):
 	print(f"Email sent to {email}")
 
 if __name__ == "__main__":
-	sendEmail(emailBody, emailRecipient, emailSubject)
+
+	if type(emailRecipient) is list:
+		for email in emailRecipient:
+			sendEmail(emailBody, email, emailSubject)
+	else:
+		sendEmail(emailBody, emailRecipient, emailSubject)
