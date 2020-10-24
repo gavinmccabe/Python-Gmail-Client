@@ -2,16 +2,20 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-
+#
 # Global configuration
+#
+
 FROM_ADDRESS = "<PUT THE FROM ADDRESS HERE>"
 GOOGLE_EMAIL = "<PUT YOUR GOOGLE SIGN-IN EMAIL HERE>"
+# This must be an application specific password if your Gmail account uses 2FA
 GOOGLE_PASSWORD = "<PUT YOUR GOOGLE PASSWORD HERE>"
 SEND_TO_SELF = False # If True, a copy of the email will be sent to yourself
 
 
-
+#
 # Message configuration
+#
 emailRecipient = "<RECIPIENT>"
 emailSubject = "<SUBJECT>"
 emailBody = \
